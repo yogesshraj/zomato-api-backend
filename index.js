@@ -12,6 +12,9 @@ axios.interceptors.request.use((config)=>{
     return config;
 })
 
+app.get("/",(req,res)=>{
+    res.status(202).send("I provide options to search category geocode city")
+})
 
 app.get("/categories",(req,res)=>{
     axios.get("https://developers.zomato.com/api/v2.1/categories")
